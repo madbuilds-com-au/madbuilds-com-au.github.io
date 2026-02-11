@@ -1,1 +1,66 @@
-MAD Builds
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAD Builds</title>
+  <link rel="icon" href="favicon-light.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="favicon-dark.png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="favicon.png" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .hero {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .logo {
+      width: min(70vw, 420px);
+      max-width: 420px;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        background-color: #050505;
+      }
+
+      .logo {
+        filter: invert(1) saturate(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <img class="logo" src="logo.png" alt="MAD Builds logo" />
+  </main>
+</body>
+</html>
